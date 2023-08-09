@@ -1,0 +1,18 @@
+CC=sc
+CFLAGS= IDIR=netinclude:
+LDFLAGS= Link LIB lib:sc.lib
+
+all: clean bin test
+
+bin:
+    $(CC) $(CFLAGS) bobex.c animtools/animtools.c
+    $(CC) $(LDFLAGS) bobex.o animtools/animtools.o TO=bobex
+
+clean:
+    -delete animtools/animtools.o >nil:
+    -delete bobex >nil:
+    -delete bobex.o >nil: 
+    -delete bobex.lnk >nil:
+
+test:
+    bobex
