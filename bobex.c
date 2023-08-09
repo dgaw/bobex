@@ -25,27 +25,28 @@ int returnCode;
 #define GEL_SIZE 4
 
 /* 16x4 pixels, 2 planes */
-/*
 USHORT chip bobData[8] =
 {
   0xeeee, 0xeeee, 0x0000, 0xeeee,
   0xbbbb, 0xbbbb, 0xffff, 0xbbbb,
 };
-*/
+
 
 /* 32x4 pixels, 2 planes */
+/*
 USHORT chip bobData[16] =
 {
   0xeeee, 0xeeee, 0xeeee, 0xeeee, 0x0000, 0x0000, 0xeeee, 0xeeee,
   0xbbbb, 0xbbbb, 0xbbbb, 0xbbbb, 0xffff, 0xffff, 0xbbbb, 0xbbbb,
 };
+*/
 
 /* information for the new bob
 ** structure defined in animtools.h
 */
 NEWBOB myNewBob = {
     bobData,   /* image data               */
-    2,         /* WORD width               */
+    1,         /* WORD width               */
     GEL_SIZE,  /* line height              */
     2,         /* image depth              */
     3,
